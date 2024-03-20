@@ -1,30 +1,114 @@
 * {
-  padding:0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-background-color: #F8F8FF;
+    background-color: #F8F8FF;
 }
 
 
 .header {
-  position: relative;
-  margin-bottom:120px;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
-  background-size: cover;
-  background-position: center;
-  border-bottom-left-radius: 120px;
-  border-bottom-right-radius: 120px;
+    position: relative;
+    margin-bottom: 120px;
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
 }
 
 
 
 main {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.second-wrapper {
+    margin: 40px 50px 40px 50px;
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-auto-rows: minmax(650px,auto);
+    justify-content: space-evenly;
+    grid-gap: 60px;
+    height: auto;
+}
 
 
+.storeallboxes {
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: black;
+    font-size: 20px;
+    cursor: auto;
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+
+
+.price p {
+    font-size: 18px;
+    color: gray;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+#purchaseButton {
+    text-align: center;
+    border-radius: 10px;
+    border: 0.5px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 40px;
+    background-color: #55c57a;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+.footer {
+    background-color: #333;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    color: #f7f7f7;
+}
+
+@media (max-width: 56.25em) {
+    .footer {
+        padding: 8rem 0;
+    }
+}
+
+body > footer div {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 1.25em 0px;
+}
+
+body > footer .social {
+    padding: 0em 1em;
+}
+
+    body > footer .social img {
+        vertical-align: middle;
+        height: 2em;
+    }
+
+body > footer .name {
+    font-size: 1.2rem;
 }
