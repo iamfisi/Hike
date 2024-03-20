@@ -45,7 +45,16 @@ LIMIT 3;";
     }
     return $data;
 }
-
+public function fetchevents(){
+    $data=null;
+    $query="Select * from events";
+    if($sql=$this->conn->query($query)){
+        while($row=mysqli_fetch_assoc($sql)){
+            $data[]=$row;
+        }
+    }
+    return $data;
+}
 
 }
 ?>

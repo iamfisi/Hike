@@ -18,8 +18,61 @@
 <main>
 
 
-   
-      <!-- _________________END BOX 1__________________________ ---->
+    <div class="wrapper">
+
+<!--_______________________ BOX 1 _____________________-->
+
+<?php
+
+				$model= new Model();
+				$rows= $model->fetchevents();
+
+				if(!empty($rows)){
+                    foreach($rows as $row){
+                        ?>
+
+  <div id="box1" class="allboxes">
+    <div class="">
+    <img src="<?php echo $row['image']; ?>" alt="logo" id="topimg">
+    </div>
+
+    <div class="first">
+
+      <p>“Nature is not a place to visit. It is home.”</p>
+    </div>
+
+    <div class="second">
+      <p><img src="icons/interface.png" alt=""  id="iconimg"><?php echo $row['location']; ?></p>
+      <p><img src="icons/calendaricon.png" alt="" id="iconimg"><?php echo $row['date']; ?></p>
+      <p><img src="icons/flagicon.png" alt="" id="flagimg"><?php echo $row['stops']; ?> stops</p>
+      <p><img src="icons/personicon.png" alt="" id="personimg"><?php echo $row['people']; ?></p>
+    </div>
+
+    <div class="third">
+      <div class="">
+
+
+      <p><b>€<?php echo $row['price']; ?></b> per person</p>
+
+    </div>
+    <div class="btnthrd">
+
+        <button type="button" name="button" id="thirdbutton">Join</button>
+    </div>
+
+    </div>
+  </div>
+  <?php
+                    }
+
+
+                }else{
+                    echo "IT IS NOT REGISTRED ANY EVENT...";
+                }
+
+                ?>
+      </div>
+<!-- _________________END BOX 1__________________________ ---->
 
 
 
@@ -49,46 +102,3 @@ You'll travel with the wind. <span class="name">HIKE.</span>.
 
 
 </footer>
-
-
-
-<!--  USELESSSSS
-      <div id="box7" class="allboxes">
-        <div class="">
-        <img src="" alt="logo">
-        </div>
-
-        <div class="">
-          some text
-        </div>
-        <div class="">
-          another text
-        </div>
-      </div>
-
-      <div id="box8" class="allboxes">
-        <div class="">
-        <img src="" alt="logo">
-        </div>
-
-        <div class="">
-          some text
-        </div>
-        <div class="">
-          another text
-        </div>
-      </div>
-
-      <div id="box9" class="allboxes">
-        <div class="">
-        <img src="" alt="logo">
-        </div>
-
-        <div class="">
-          some text
-        </div>
-        <div class="">
-          another text
-        </div>
-    </div
--->
