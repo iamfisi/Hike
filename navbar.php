@@ -28,9 +28,16 @@
 <li>
   <a  href="contactus.php" >Contact US</a>
 </li>
+<?php
+session_start();
+include 'model.php';
+$dashboardLink = '';
+if (isset($_SESSION['ROLE']) && $_SESSION['ROLE'] == 'admin') {
+    $dashboardLink = '<li><a href="dashboard.php">Dashboard</a></li>';
+}
+?>
 
-
-
+<?php echo $dashboardLink; ?>
 <li>
 
 <a href="cart.php">Cart</a>
@@ -42,7 +49,17 @@
 
 </li>
 <li id="login">
+<?php
+	
 
+ if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
+{
+?>
+      <a href="logout.php">Logout</a>
+<?php }else{ ?>
+     <a href="login.php">Login</a> 
+   
+<?php } ?>
 
 </li>
 </ul>
