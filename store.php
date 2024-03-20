@@ -22,10 +22,32 @@
 
 
 
+<?php
 
+$model= new Model();
+ $rows= $model->fetchproducts();
+ if(!empty($rows)){
+    foreach($rows as $row){
+
+
+?>
   <div class="storeallboxes">
 
-    
+    <div class="first">
+      <img src="<?php echo $row['image']; ?>" alt="" width="200px" height="130px">
+    </div>
+
+  <div class="second">
+    <p><?php echo $row['name']; ?></p>
+  </div>
+
+  <div class="price">
+    <p><?php echo $row['price']; ?>€</p>
+  </div>
+
+  <div class="third">
+    <input type="button" name="" value="Purchase" id="purchaseButton">
+  </div>
 
   </div>
 
@@ -35,40 +57,18 @@
 
 
 
+<?php
+                    }
 
+                }else{
+                    echo "THERE IS NO PRODUCT REGISTRED...";
+                }
 
-
-
-
+			?>
 
 
 
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
