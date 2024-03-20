@@ -1,0 +1,18 @@
+
+
+header {
+  position: relative;
+  height:auto;
+  margin-bottom:120px;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+}
+
+.view{
+margin-top: 2px;
+margin-bottom: 20px;
+text-align: center;
+}
