@@ -148,6 +148,126 @@ public function fetchadmin(){
     return $data;
 }
 
+public function fetchp(){
+    $data=null;
+    $query="Select * from products";
+    if($sql=$this->conn->query($query)){
+        while($row=mysqli_fetch_assoc($sql)){
+            $data[]=$row;
+        }
+    }
+    return $data;
+}
+public function deleteproduct($id){
+
+    $query="delete from products where id='$id'";
+    if($sql= $this->conn->query($query)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+ public function editProduct($id){
+
+        $data=null;
+
+        $query="Select * from products where id='$id'";
+        if($sql =$this->conn->query($query)){
+            while ($row= $sql->fetch_assoc()){
+                $data=$row;
+            }
+        }
+        return $data;
+
+    }
+    public function updateProduct($id){
+        if (isset($_POST['update'])) {
+
+            $name = $_POST['name'];
+            $price = $_POST['price'];
+            $files = $_FILES['image'];
+
+        
+            $filename = $files['name'];
+        
+            $filetmp = $files['tmp_name'];
+
+            $fileext = explode('.', $filename);
+            $filecheck = strtolower(end($fileext));
+
+            $fileextstored = array('png', 'jpg', 'jpeg');
+
+            if (in_array($filecheck, $fileextstored)) {
+                $destionationfile = 'upload/' . $filename;
+                move_uploaded_file($filetmp, $destionationfile);
+
+               
+                $query = "UPDATE products  set image='$destionationfile',name='$name', price='$price' where id='$id' ";
+                if($sql =$this->conn->query($query)){
+                    echo "Successfully";
+                }else{
+                    echo "Falied";
+                }
+            } else {
+                echo "Extension is not matching ";
+            }
+        }
+
+    }
+
+    public function insertproduct(){
+				
+				
+    if (isset($_POST['submit'])) {
+
+        $name = $_POST['name'];
+        $price = $_POST['price'];
+        $files = $_FILES['image'];
+
+    
+        $filename = $files['name'];
+    
+        $filetmp = $files['tmp_name'];
+
+        $fileext = explode('.', $filename);
+        $filecheck = strtolower(end($fileext));
+
+        $fileextstored = array('png', 'jpg', 'jpeg');
+
+        if (in_array($filecheck, $fileextstored)) {
+            $destionationfile = 'upload/' . $filename;
+            move_uploaded_file($filetmp, $destionationfile);
+
+            $query = "INSERT INTO `products`( `image`, `name`,  `price`) VALUES ('$destionationfile','$name','$price')";
+            if($sql = $this->conn -> query($query)){
+                echo "Successfully";
+            }else{
+                echo "Falied";
+            }
+        } else {
+            echo "Extension is not matching ";
+        }
+    }
+
+}
+
+
+
+public function fetchinbox(){
+    $data=null;
+    $query="Select * from inbox";
+    if($sql=$this->conn->query($query)){
+        while($row=mysqli_fetch_assoc($sql)){
+            $data[]=$row;
+        }
+    }
+    return $data;
+}
+
+
+
 public function insert(){
 				
 if (isset($_POST['submit'])) {

@@ -1,4 +1,4 @@
-    <nav>
+<nav>
         <ul>
             <li>
                 <a href="add_events.php">
@@ -7,7 +7,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="add_products.php">
 
 
                     <span>Products</span>
@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="inbox.php">
                     <span>Inbox</span>
                 </a>
             </li>
