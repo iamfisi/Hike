@@ -65,7 +65,9 @@ CREATE TABLE `inbox` (
 --
 
 INSERT INTO `inbox` (`id`, `name`, `email`, `message`) VALUES
-(1, 'Granit', 'fh57192@gmail.com', 'Pershendetje! TEST');
+
+(1, 'Fisi', 'fh57192@gmail.com', 'Pershendetje! TEST');
+
 
 -- --------------------------------------------------------
 
