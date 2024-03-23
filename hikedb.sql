@@ -45,7 +45,7 @@ INSERT INTO `events` (`id`, `image`, `location`, `date`, `stops`, `people`, `pri
 (5, 'upload/Sharr.jpg', 'Sharr Mountain', '2024-07-17', 15, 20, 10),
 (6, 'upload/4.jpg', ' Gjeravica Peak', '2024-07-28', 6, 40, 13),
 (7, 'upload/Brezovica.jpg', 'Brezovic', '2024-07-30', 2, 60, 20),
-(8, 'upload/5.jpg', 'Rugov', '0000-00-00', 5, 50, 15);
+(8, 'upload/5.jpg', 'Rogov', '0000-00-00', 5, 50, 15);
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,9 @@ CREATE TABLE `inbox` (
 --
 
 INSERT INTO `inbox` (`id`, `name`, `email`, `message`) VALUES
+
 (1, 'Fisi', 'fh57192@gmail.com', 'Pershendetje! TEST');
+
 
 -- --------------------------------------------------------
 
