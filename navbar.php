@@ -20,7 +20,7 @@
   <a href="home.php">Home</a>
 </li>
 <li>
-  <a href="store.php" >Store</a>
+  <a href="store.php" >Products</a>
 </li>
 <li>
   <a href="events.php" >Events</a>
@@ -38,11 +38,7 @@ if (isset($_SESSION['ROLE']) && $_SESSION['ROLE'] == 'admin') {
 ?>
 
 <?php echo $dashboardLink; ?>
-<li>
 
-<a href="cart.php">Cart</a>
-
-</li>
 <li>
 
 <a href="images.php">Images</a>

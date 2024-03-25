@@ -38,7 +38,7 @@
 
     <div class="first">
 
-      <p>“Nature is not a place to visit. It is home.”</p>
+      <p>&quot Nature is not a place to visit. It is home.&quot</p>
     </div>
 
     <div class="second">
@@ -52,7 +52,7 @@
       <div class="">
 
 
-      <p><b>€<?php echo $row['price']; ?></b> per person</p>
+      <p><b>&euro;<?php echo $row['price']; ?></b> per person</p>
 
     </div>
     <div class="btnthrd">
