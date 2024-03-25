@@ -111,8 +111,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userID`, `username`, `email`, `usertype`, `password`, `create_datetime`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2024-07-04 14:41:31'),
-(2, 'user', 'user@gmail.com', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', '2024-07-15 21:19:34');
+(1, 'admin', 'admin@gmail.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2024-03-20 14:41:31'),
+(2, 'user', 'user@gmail.com', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', '2024-03-20 21:19:34');
 
 --
 -- Indexes for dumped tables
