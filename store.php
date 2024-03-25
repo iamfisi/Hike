@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Store</title>
     <link rel="stylesheet" href="css/store.css">
   </head>
@@ -42,12 +42,10 @@ $model= new Model();
   </div>
 
   <div class="price">
-    <p><?php echo $row['price']; ?>€</p>
+    <p><?php echo $row['price']; ?>&euro;</p>
   </div>
 
-  <div class="third">
-    <input type="button" name="" value="Purchase" id="purchaseButton">
-  </div>
+  
 
   </div>
 

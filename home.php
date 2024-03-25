@@ -63,7 +63,7 @@
       <div class="">
 
 
-      <p><b>€<?php echo $row['price']; ?></b> per person</p>
+      <p><b>&euro;<?php echo $row['price']; ?></b> per person</p>
 
     </div>
     <div class="btnthrd">
@@ -112,7 +112,7 @@
   </div>
 
   <div class="price">
-    <p><?php echo $row['price']; ?>€</p>
+    <p><?php echo $row['price']; ?>&euro;</p>
   </div>
 
   <div class="third">
